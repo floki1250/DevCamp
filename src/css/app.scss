@@ -1,0 +1,63 @@
+// app global css in SCSS form
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.title {
+  font-family: $font;
+  color: $primary;
+  margin-right: 50px;
+}
+.q-header {
+  background-color: #ffffff6c;
+  margin: 10px;
+  border-radius: 10px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.q-drawer {
+  background-color: #ffffff;
+  margin: 20px 10px 10px 10px;
+  border-radius: 10px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.quest_box {
+  max-width: 100% !important ;
+  height: 300px;
+  border: 1px solid $secondary;
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  color: black;
+  //box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.ans_box {
+  // width: 800px;
+  max-width: 100% !important ;
+  height: 300px;
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+  color: rgb(56, 56, 56);
+  border: 1px solid #0a9f9f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.sidebar .q-drawer {
+  background-color: rgb(250, 250, 250);
+  color: black;
+  box-shadow: none !important;
+  margin: 0 !important;
+  border-left: 1px solid #0a9f9f;
+  border-radius: 0px;
+  margin: 0px !important;
+}
+.editor {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  margin: 30px;
+  max-width: 100% !important ;
+}
