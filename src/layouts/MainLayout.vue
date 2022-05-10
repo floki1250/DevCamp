@@ -1,33 +1,17 @@
 <template>
   <q-layout view="hHh Lpr lff">
-    <q-header>
+    <q-header
+      :class="{
+        headerShadowOn: this.scrollPosition > 0,
+      }"
+    >
+      <q-scroll-observer @scroll="onScroll" />
       <q-toolbar>
         <q-btn flat @click="drawer = !drawer" round dense icon="eva-menu" />
         <img src="../assets/logo.png" alt="" srcset="" width="50" />
         <q-toolbar-title class="title"> Dev Camp </q-toolbar-title>
+        <q-btn color="primary" icon="search" @click="onClick" flat round />
 
-        <q-input
-          dense
-          rounded
-          outlined
-          v-model="search"
-          class="q-ml-md"
-          placeholder="Search ..."
-          style="width: 50%"
-        >
-          <template v-slot:append>
-            <q-icon v-if="search === ''" name="search" color="teal" />
-            <q-icon
-              v-else
-              name="clear"
-              class="cursor-pointer"
-              @click="search = ''"
-              color="teal"
-            />
-          </template>
-        </q-input>
-
-        <q-space />
         <div style="font-weight: bold; margin-left: 10px">Adem DR</div>
         <div>
           <q-btn round flat @click="onClick"
@@ -94,23 +78,27 @@
     </q-drawer>
     <div class="sidebar">
       <q-drawer side="right" v-model="sidebar" :width="400" :breakpoint="800">
+        <h1 v-for="i in 10" :key="i">SideBar Here</h1>
       </q-drawer>
     </div>
 
     <q-page-container>
       <q-page>
         <div class="quest_box">
-          <div class="user row wrap justify-start items-start content-start">
-            <q-avatar
-              size="50px"
-              font-size="30px"
-              color="teal"
-              text-color="white"
-              >A</q-avatar
-            >
-            <div>
-              <p>Asked 1 month ago</p>
-              <p>Asked 1 month ago</p>
+          <div class="user row q-col-gutter-x-md">
+            <div class=".col">
+              <q-avatar
+                size="50px"
+                font-size="30px"
+                color="teal"
+                text-color="white"
+                >A</q-avatar
+              >
+            </div>
+
+            <div class=".col">
+              <p class="questionUser">User Asked Here</p>
+              <p class="timec_checke wrap">Question Date 18/12/2015</p>
             </div>
           </div>
 
@@ -129,13 +117,22 @@
         <div v-for="n in 15" :key="n">
           <div class="ans_box">
             <q-card-section>
-              <q-avatar
-                size="50px"
-                font-size="30px"
-                color="teal"
-                text-color="white"
-                >B</q-avatar
-              >
+              <div class="user row q-col-gutter-x-md">
+                <div class=".col">
+                  <q-avatar
+                    size="50px"
+                    font-size="30px"
+                    color="teal"
+                    text-color="white"
+                    >A</q-avatar
+                  >
+                </div>
+
+                <div class=".col">
+                  <p class="questionUser">User Asked Here</p>
+                  <p class="timec_checke wrap">Question Date 18/12/2015</p>
+                </div>
+              </div>
             </q-card-section>
             <div>
               <q-editor
@@ -256,6 +253,7 @@ export default {
       question: ref(
         "<pre><b><font size='7'>This is a Question Box !</font></b></pre>"
       ),
+      scrollPosition: 0,
       search: "",
       drawer: false,
       miniState: true,
@@ -269,9 +267,13 @@ export default {
   },
   components: {},
   methods: {
+    onScroll(info) {
+      this.scrollPosition = info.position.top;
+    },
     test() {
       this.field = h(this.qeditor);
       console.log(this.qeditor);
+      console.log(this.$refs.header);
     },
   },
 };
