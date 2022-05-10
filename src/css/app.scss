@@ -11,7 +11,7 @@ body {
   margin-right: 50px;
 }
 .q-header {
-  background-color: rgba(252, 252, 252, 0.462);
+  background-color: rgba(132, 218, 192, 0.188);
   margin: 10px;
   border-radius: 10px;
   color: black;
@@ -47,6 +47,7 @@ body {
   margin: 50px 40px 0px 40px;
   border-radius: 10px;
   color: black;
+  margin: 50px;
 }
 .ans_box {
   // width: 800px;
@@ -66,7 +67,7 @@ body {
   color: black;
   box-shadow: none !important;
   margin: 0 !important;
-  //border-left: 1px solid #7bcaca15;
+  border-left: 1px solid #43434315;
   border-radius: 0px;
   margin: 0px !important;
 }
@@ -77,8 +78,8 @@ body {
   max-width: 100% !important ;
 }
 .user {
-  border: 2px solid #b9ecda;
-  background-color: #f3fffa;
+  border: 2px solid #fddeb4;
+  background-color: #fff7f1;
   border-radius: 2rem;
   min-width: 50%;
   max-width: 60%;
@@ -90,8 +91,16 @@ body {
 .questionUser {
   font-weight: bold;
 }
-
 .ans_box .user {
   border: 2px solid #a2dfcb;
   background-color: $secondary;
+}
+
+.q-item {
+  margin: 0px 2px 0px 2px;
+  border-radius: 10px;
+  color: rgb(22, 22, 22);
+}
+.q-item:hover {
+  background-color: #b9ffe8;
 }

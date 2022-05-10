@@ -1,10 +1,6 @@
 <template>
   <q-layout view="hHh Lpr lff">
-    <q-header
-      :class="{
-        headerShadowOn: this.scrollPosition > 0,
-      }"
-    >
+    <q-header reveal>
       <q-scroll-observer @scroll="onScroll" />
       <q-toolbar>
         <q-btn flat @click="drawer = !drawer" round dense icon="eva-menu" />
@@ -90,7 +86,7 @@
               <q-avatar
                 size="50px"
                 font-size="30px"
-                color="teal"
+                color="orange"
                 text-color="white"
                 >A</q-avatar
               >
@@ -122,14 +118,14 @@
                   <q-avatar
                     size="50px"
                     font-size="30px"
-                    color="teal"
+                    color="teal-4"
                     text-color="white"
                     >A</q-avatar
                   >
                 </div>
 
                 <div class=".col">
-                  <p class="questionUser">User Asked Here</p>
+                  <p class="questionUser">User answer Here</p>
                   <p class="timec_checke wrap">Question Date 18/12/2015</p>
                 </div>
               </div>
