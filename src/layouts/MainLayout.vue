@@ -11,11 +11,7 @@
         <div style="font-weight: bold; margin-left: 10px">Adem DR</div>
         <div>
           <q-btn round flat @click="onClick"
-            ><q-avatar
-              size="35px"
-              font-size="30px"
-              color="teal"
-              text-color="white"
+            ><q-avatar size="35px" color="teal" text-color="white"
               ><img
                 :src="'https://api.multiavatar.com/Adem%20DARDOUR.svg'"
                 alt="" /></q-avatar
@@ -85,7 +81,7 @@
             <div class=".col">
               <q-avatar
                 size="50px"
-                font-size="30px"
+                font-size="20px"
                 color="orange"
                 text-color="white"
                 >A</q-avatar
