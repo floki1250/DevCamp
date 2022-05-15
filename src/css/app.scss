@@ -3,7 +3,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(243, 255, 253, 0.23);
+}
+.q-parallax {
+  width: 100%;
+  height: 100vh;
 }
 .title {
   font-family: $font;
@@ -21,20 +25,26 @@ body {
   backdrop-filter: blur(5px);
 }
 .headerShadowOn {
-  background-color: rgba(252, 252, 252, 0.462);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: rgba(255, 255, 255, 0.508);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   transition: all 1s;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(16px);
 }
 .headerShadowOff {
   box-shadow: none;
 }
 .q-drawer {
-  background-color: rgb(250, 250, 250);
+  background-color: rgba(255, 255, 255, 0.508);
   margin: 20px 10px 10px 10px;
   border-radius: 10px;
   color: black;
   //border: 2px solid #f8fffd;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(16px);
 }
 .quest_box {
   padding: 10px;
@@ -57,7 +67,8 @@ body {
   border-radius: 10px;
   color: rgb(56, 56, 56);
   border: 1px solid #e9e9e9;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .sidebar .q-drawer {
   background-color: rgb(253, 253, 253);
@@ -69,7 +80,8 @@ body {
   margin: 0px !important;
 }
 .editor_box {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   margin: 30px;
   max-width: 100% !important ;
 }

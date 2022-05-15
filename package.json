@@ -13,6 +13,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "@vueup/vue-quill": "^1.0.0-beta.8",
+    "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "dedent": "^0.7.0",
     "quasar": "^2.6.0",

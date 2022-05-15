@@ -1,22 +1,25 @@
 <template>
   <q-layout view="hHh Lpr lff">
-    <q-header reveal>
+    <q-header
+      reveal
+      :class="scrollPosition > 0 ? 'headerShadowOn' : 'headerShadowOff'"
+    >
       <q-scroll-observer @scroll="onScroll" />
       <q-toolbar>
         <q-btn flat @click="drawer = !drawer" round dense icon="eva-menu" />
         <img src="../assets/logo.png" alt="" srcset="" width="50" />
         <q-toolbar-title class="title"> Dev Camp </q-toolbar-title>
         <transition
-          v-if="show == true"
-          appear
-          enter-active-class="animated fadeInRight"
-          leave-active-class="animated fadeInLeft"
+          name="custom-classes"
+          enter-active-class="animate__animated animate__fadeInRight"
+          leave-active-class="animate__animated animate__fadeOutRight"
         >
           <q-input
+            v-show="show == true"
             v-model="text"
             type="text"
             rounded
-            standout
+            standout="bg-teal-5 text-white"
             dense
             placeholder="Search"
             class="search_input"
@@ -49,7 +52,7 @@
     >
       <q-scroll-area class="fit">
         <q-list padding>
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple:green to="/Home">
             <q-item-section avatar>
               <q-icon name="eva-home-outline" />
             </q-item-section>
@@ -57,7 +60,7 @@
             <q-item-section> Home </q-item-section>
           </q-item>
 
-          <q-item active clickable v-ripple>
+          <q-item active clickable v-ripple:blue to="/Questions">
             <q-item-section avatar>
               <q-icon name="eva-message-square-outline" />
             </q-item-section>
@@ -65,7 +68,7 @@
             <q-item-section> Messages </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple:blue to="/Questions">
             <q-item-section avatar>
               <q-icon name="eva-people-outline" />
             </q-item-section>
@@ -75,7 +78,7 @@
           <q-space />
           <q-separator />
 
-          <q-item clickable v-ripple>
+          <q-item clickable v-ripple:blue to="/Questions">
             <q-item-section avatar>
               <q-icon name="eva-settings-outline" />
             </q-item-section>
@@ -85,17 +88,14 @@
         </q-list>
       </q-scroll-area>
     </q-drawer>
-    <div class="sidebar">
-      <q-drawer side="right" v-model="sidebar" :width="400" :breakpoint="800">
-        <h1 v-for="i in 10" :key="i">SideBar Here</h1>
-      </q-drawer>
-    </div>
+
     <q-page-container>
       <router-view></router-view>
     </q-page-container>
   </q-layout>
 </template>
 <script>
+import "animate.css";
 export default {
   data() {
     return {
@@ -104,7 +104,7 @@ export default {
       search: "",
       drawer: false,
       miniState: true,
-      sidebar: true,
+
       field: "",
     };
   },
