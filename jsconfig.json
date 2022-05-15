@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "DevCamp",
+    "baseUrl": "projects",
     "paths": {
       "src/*": ["src/*"],
       "app/*": ["*"],
