@@ -60,7 +60,7 @@
             <q-item-section> Home </q-item-section>
           </q-item>
 
-          <q-item active clickable v-ripple:blue to="/Questions">
+          <q-item active clickable v-ripple:blue to="/QuestionPage">
             <q-item-section avatar>
               <q-icon name="eva-message-square-outline" />
             </q-item-section>
@@ -68,7 +68,7 @@
             <q-item-section> Messages </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple:blue to="/Questions">
+          <q-item clickable v-ripple:blue to="/Question">
             <q-item-section avatar>
               <q-icon name="eva-people-outline" />
             </q-item-section>

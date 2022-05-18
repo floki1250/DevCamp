@@ -1,18 +1,17 @@
+import QuestionPage from "pages/Question.vue";
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/Home.vue") }],
+    component: () => import("pages/Home.vue"),
   },
   {
-    path: "/Home",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/Home.vue") }],
+    path: "/home",
+    component: () => import("pages/Home.vue"),
   },
   {
-    path: "/Questions",
+    path: "/Question",
     component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "", component: () => import("pages/Questions.vue") }],
+    children: [{ path: "/:id", component: QuestionPage }],
   },
 
   // Always leave this as last one,
